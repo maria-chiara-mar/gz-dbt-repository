@@ -1,0 +1,6 @@
+sources:
+  - name: gz_raw_data
+tables:
+  - raw_gz_product
+  - raw_gz_sales
+  - raw_gz_ship
