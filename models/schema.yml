@@ -3,19 +3,9 @@ version: 2
 sources:
   - name: gz_raw_data
     database: sacred-alloy-475012-a4
-    schema: '{{gz_raw_data}}'
+    schema: "{{target.schema}}"
     loader: bigquery
-    freshness: 
-      error_after:
-        count: 12
-        period: hour
-      warn_after:
-        count: 12
-        period: hour
     tables:
       - name: raw_gz_product
       - name: raw_gz_sales
       - name: raw_gz_ship
-    
-
-
