@@ -7,5 +7,38 @@ sources:
     loader: bigquery
     tables:
       - name: raw_gz_sales
+        identifier: raw_gz_sales
+        description: sales of greenweez - we have one row per product_id found in each order id
+        loaded_at_field: date_date
+        columns:
+          - name: date_date
+            description: date of purchase
+          - name: orders_id
+            description: identifier of the order
+          - name: product_id
+            description: identifier of product purchased
+          - name: revenue
+            description: revenue generated from single product. revenue = quantity * selling_price
+          - name: quantity
+            description: quantity of given product ordered in given order
+          
       - name: raw_gz_product
+        identifier: raw_gz_product
+        description: products of greenweez
+        columns:
+          - name: products_id
+            description: primary key
+          - name: purchase_price
+            description: purchase price of the product
       - name: raw_gz_ship
+        identifier: raw_gz_ship
+        description: shipping data from Greenweez orders
+        columns:
+          - name: orders_id
+            description: primary key
+          - name: shipping_id
+            description: price costumers pay for shipping
+          - name: log_cost
+            description: cost of preparing the parcels for greenweez
+          - name: ship_cost
+            description: shipping cost paid by greenweez to the carrier 
