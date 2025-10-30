@@ -1,4 +1,3 @@
-
 select
     products_id,
     date_date,
