@@ -3,9 +3,9 @@ version: 2
 sources:
   - name: gz_raw_data
     database: sacred-alloy-475012-a4
-    schema: "{{target.schema}}"
+    schema: gz_raw_data
     loader: bigquery
     tables:
-      - name: raw_gz_product
       - name: raw_gz_sales
+      - name: raw_gz_product
       - name: raw_gz_ship
