@@ -1,3 +1,4 @@
+{{config(materalized='table')}}
 WITH orders_per_day AS (
    SELECT
      date_date
