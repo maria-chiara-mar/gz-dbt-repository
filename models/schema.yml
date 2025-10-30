@@ -28,6 +28,10 @@ sources:
         columns:
           - name: products_id
             description: primary key
+            tests:
+              - unique
+              - not_null
+              
           - name: purchase_price
             description: purchase price of the product
       - name: raw_gz_ship
@@ -36,6 +40,10 @@ sources:
         columns:
           - name: orders_id
             description: primary key
+            tests:
+              - unique
+              - not_null
+              
           - name: shipping_id
             description: price costumers pay for shipping
           - name: log_cost
